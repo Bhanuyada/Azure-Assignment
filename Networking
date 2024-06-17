@@ -1,0 +1,124 @@
+
+## Assignment: Azure Networking and Application Services
+
+### Objectives
+1. **Create a Virtual Network (VNet) with Subnets**
+2. **Set Up Hub and Spoke Architecture with Multiple VNets**
+3. **Create and Test Internal and External Load Balancers**
+4. **Create and Test Azure Application Gateway**
+5. **Set Up a Domain and DNS Server**
+
+
+
+### Part A: Create a Virtual Network (VNet) with Subnets
+
+**Objective**: Set up a Virtual Network with two subnets and deploy VMs and SQL DB in the respective subnets.
+
+**Steps**:
+1. **Create a Virtual Network**:
+   - Navigate to Azure Portal > Create a resource > Networking > Virtual Network.
+   - Configure the required fields (Subscription, Resource group, Name, Region, IP Address space).
+
+2. **Create Subnets**:
+   - Add two subnets: 
+     - **Subnet-1**: Deploy Linux VM and Windows VM.
+     - **Subnet-2**: Deploy SQL DB.
+
+3. **Deploy VMs in Subnet-1**:
+   - Create a Linux VM in Subnet-1.
+   - Create a Windows VM in Subnet-1.
+
+4. **Deploy SQL DB in Subnet-2**:
+   - Navigate to Create a resource > Databases > SQL Database.
+   - Configure the SQL database to use Subnet-2.
+
+---
+
+### Part B: Set Up Hub and Spoke Architecture with Multiple VNets
+
+**Objective**: Create four VNets and configure them in a Hub-Spoke architecture. Verify connectivity by pinging VMs.
+
+**Steps**:
+1. **Create VNets**:
+   - Create the following VNets: 
+     - Management VNet (HUB)
+     - Production VNet
+     - Testing VNet
+     - Development VNet
+
+2. **Configure Peering**:
+   - Peer each spoke VNet (Production, Testing, Development) with the Hub VNet (Management).
+
+3. **Verify Connectivity**:
+   - Deploy a VM in each VNet.
+   - From the Management VM, ping the VMs in other VNets to verify connectivity.
+
+---
+
+### Part C: Create and Test Internal and External Load Balancers
+
+**Objective**: Create an internal and an external load balancer to manage traffic.
+
+**Steps**:
+1. **Internal Load Balancer**:
+   - Navigate to Create a resource > Networking > Load Balancer.
+   - Select Internal and configure backend pool, health probes, and load balancing rules.
+
+2. **External Load Balancer**:
+   - Repeat the process, selecting Public for an external load balancer.
+   - Configure backend pools, health probes, and load balancing rules.
+
+---
+
+### Part D: Create and Test Azure Application Gateway
+
+**Objective**: Create an Azure Application Gateway and test its functionality.
+
+**Steps**:
+1. **Create Application Gateway**:
+   - Navigate to Create a resource > Networking > Application Gateway.
+   - Configure the gateway, backend pool, HTTP settings, and routing rules.
+
+2. **Test Application Gateway**:
+   - Deploy a simple web application.
+   - Access the web app through the Application Gateway to verify functionality.
+
+---
+
+### Part E: Set Up a Domain and DNS Server
+
+**Objective**: Register a domain, set up a server on a VM, and configure DNS.
+
+**Steps**:
+1. **Register a Domain**:
+   - Navigate to Create a resource > Networking > DNS zone.
+   - Register the domain and configure the DNS zone.
+
+2. **Set Up a Server on a VM**:
+   - Create a VM and set up a web server (Apache, Nginx, IIS).
+   - Configure the domain to point to the VM’s public IP using the DNS zone.
+
+---
+
+### Deliverables
+1. **VNet and Subnet Configuration**:
+   
+   - Details of VM and SQL DB deployment.
+
+2. **Hub and Spoke Architecture**:
+   - Diagrams of VNet peering setup.
+   
+
+3. **Load Balancer Setup**:
+   - Configuration details of internal and external load balancers.
+  
+4. **Application Gateway**:
+   - Configuration details of the Application Gateway.
+  
+5. **Domain and DNS Setup**:
+   - Domain registration details.
+   - DNS zone configuration.
+   
+
+
+
